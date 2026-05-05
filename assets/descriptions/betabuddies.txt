@@ -1,0 +1,28 @@
+<h3>De Uitdaging: Sociale Cohesie op het Betaplein</h3>
+<p>Het Betaplein in Leiden kampt met een gebrek aan sociale veiligheid en verbondenheid. De bewoners, voornamelijk studenten, wonen er gemiddeld slechts vijf jaar en leven vaak geïsoleerd door de onpersoonlijke architectuur van de gebouwen. In opdracht van Julius Kok (Leren met de Stad) heb ik als Product Designer gewerkt aan een digitale oplossing om deze sociale afstand te overbruggen.</p>
+
+<h3>Het Ontwerpproces: Itereren op Basis van Feedback</h3>
+<p>Het project startte bij een initieel concept van de opdrachtgever, dat ik vertaalde naar een low-fi design. Door middel van nauwe samenwerking en feedbacksessies met de opdrachtgever en betrokken organisaties (Incluzio en Leren met de Stad), is het ontwerp fundamenteel aangepast:</p>
+<ul>
+    <li><strong>UX-Patterns:</strong> Hoewel de opdrachtgever een top-navigation wenste, heb ik op basis van Material Design principles gekozen voor een bottom navigation bar. Dit verhoogt de duim-vriendelijkheid en de algemene usability, omdat navigatie binnen handbereik blijft.</li>
+    <li><strong>Visuele Identiteit:</strong> De kleuren van de 'Betaplein-bever' zijn verwerkt in een strakke dark-mode interface, wat aansluit bij de voorkeur van de jonge doelgroep.</li>
+    <li><strong>Social Matching:</strong> Om organische ontmoetingen te stimuleren, heb ik een algoritme-concept uitgewerkt dat bewoners koppelt op basis van gedeelde interesses.</li>
+</ul>
+
+<h3>Onderzoek & Innovatie: De Brug tussen Fysiek en Digitaal</h3>
+<p>Om de app laagdrempelig te maken, heb ik onderzoek gedaan naar het gebruik van QR-codes om bewoners bij evenementen te betrekken.</p>
+<ul>
+    <li><strong>Experiment:</strong> Ik testte de scanbaarheid van QR-codes onder verschillende lichtomstandigheden en met diverse hardware (Samsung vs. iPhone).</li>
+    <li><strong>Resultaat:</strong> Uit de data bleek dat een QR-code van minimaal 14cm essentieel is voor betrouwbaarheid op afstand, een inzicht dat direct is meegenomen in het implementatie-advies voor fysieke locaties op het plein.</li>
+</ul>
+
+<h3>Ethics by Design & Veiligheid</h3>
+<p>Veiligheid is de kern van Betabuddies. Daarom zijn specifieke ethische en privacy-gerelateerde keuzes gemaakt:</p>
+<ul>
+    <li><strong>Privacy & Autonomie:</strong> Gebruikers hebben een 'Right to Erasure' via een duidelijke Delete Account-functie en kunnen evenementen incognito bijwonen om hun privacy te beschermen.</li>
+    <li><strong>Puntensysteem:</strong> In mijn adviesrapport heb ik gepleit voor een handmatig verificatiesysteem door 'vertrouwde personen' (zoals buurtcoaches). Dit voorkomt 'zachte surveillance' door locatie-tracking en beschermt de intrinsieke motivatie van de bewoners.</li>
+    <li><strong>Toegangsbeheer:</strong> Om de exclusiviteit voor de buurt te waarborgen, heb ik de implementatie van een DigiD-inlogsysteem geadviseerd, zodat alleen geverifieerde bewoners toegang krijgen tot de community.</li>
+</ul>
+
+<h3>Resultaat</h3>
+<p>Het project resulteerde in een geteste Proof of Concept (POC) die verder gaat dan alleen een interface. Het biedt een fundament voor een veilige, inclusieve buurt-app die bewoners niet alleen online verbindt, maar vooral activeert om elkaar in de echte wereld te ontmoeten.</p>

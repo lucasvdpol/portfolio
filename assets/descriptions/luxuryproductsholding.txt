@@ -1,0 +1,22 @@
+<h3>De Uitdaging: Retourenmanagement voor Luxury Products Holding</h3>
+<p>Voor de opdrachtgever Luxury Products Holding was ik verantwoordelijk voor het ontwerpen en implementeren van een cruciale nieuwe feature binnen hun bestaande e-commerce platform: een volledig geautomatiseerd retoursysteem. Het doel was om het proces voor de eindgebruiker te versimpelen en de data-integriteit aan de achterkant te waarborgen.</p>
+
+<h3>Database Architectuur & Backend Development</h3>
+<p>De basis van de feature begon bij een solide data-ontwerp. Ik heb een <strong>Entity Relationship Diagram (ERD)</strong> ontworpen om de relaties tussen bestellingen, producten en retourzendingen in kaart te brengen. 
+<ul>
+    <li><strong>Data-modellering:</strong> De database is opgebouwd in <strong>PostgreSQL</strong>, waarbij ik constraints heb gebruikt om te voorkomen dat producten vaker geretourneerd kunnen worden dan dat ze gekocht zijn.</li>
+    <li><strong>Java Models:</strong> In de backend heb ik deze database-tabellen vertaald naar Java-modellen, waardoor de logica achter de retouren (zoals status-updates en voorraadbeheer) veilig en schaalbaar wordt afgehandeld.</li>
+</ul>
+
+<h3>Frontend Integratie & Fullstack Koppeling</h3>
+<p>Nadat de motor (de backend) stond, heb ik de gebruikersinterface ontwikkeld met <strong>HTML</strong>. De uitdaging hierbij was om de interface naadloos te laten aansluiten op de bestaande huisstijl van de website. Door middel van een nauwe koppeling tussen de frontend en de Java-controllers, kunnen gebruikers nu in real-time hun retourstatus inzien en nieuwe aanvragen indienen.</p>
+
+<h3>DevOps & Deployment met Docker</h3>
+<p>Om een consistente werking tussen mijn lokale machine en de productieomgeving te garanderen, heb ik gebruikgemaakt van <strong>Docker</strong>.
+<ul>
+    <li><strong>Containerization:</strong> Ik heb aangepaste <strong>Dockerfiles</strong> geschreven om de applicatie en de PostgreSQL-database te isoleren in containers.</li>
+    <li><strong>Server Deployment:</strong> Het volledige project is gecompileerd en gedraaid op de servers van de Hogeschool, waarbij ik Docker-compose heb ingezet om de verschillende services (app en DB) met elkaar te laten communiceren.</li>
+</ul>
+
+<h3>Resultaat</h3>
+<p>Het resultaat is een volledig functionele, fullstack feature die klaar is voor productie. Door de inzet van Docker is de applicatie onafhankelijk van de onderliggende server-architectuur, wat toekomstige updates en schaalvergroting voor Luxury Products Holding aanzienlijk eenvoudiger maakt.</p>

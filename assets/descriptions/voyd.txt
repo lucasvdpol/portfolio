@@ -1,0 +1,25 @@
+<h3>VOYD Fitness: De AI-Aangedreven Gezondheidshub</h3>
+<p>VOYD Fitness is een alles-in-één platform ontworpen voor serieuze atleten die volledige controle willen over hun training en voeding. Waar veel fitness-apps afhankelijk zijn van een constante internetverbinding, is VOYD gebouwd met een <strong>offline-first filosofie</strong>, waardoor de gebruiker altijd en overal kan trainen.</p>
+
+<h3>Intelligente Coaching met Gemini AI</h3>
+<p>De kern van de app wordt versterkt door de integratie van de <strong>Gemini AI API</strong>. Dit tilt de gebruikerservaring naar een hoger niveau door middel van:
+<ul>
+    <li><strong>AI-Gegenereerde Samenvattingen:</strong> Gebruikers ontvangen wekelijkse rapporten die patronen in hun training en voeding herkennen en verbeterpunten suggereren.</li>
+    <li><strong>Form Coaching:</strong> Door AI-ondersteuning bij oefeningen helpt de app gebruikers om hun uitvoering te perfectioneren en blessures te voorkomen.</li>
+</ul>
+
+<h3>De Kracht van Offline-First Architectuur</h3>
+<p>Voor een fitness-app is betrouwbaarheid in de sportschool (waar vaak slecht bereik is) cruciaal. Daarom heb ik een hybride data-architectuur opgezet:</p>
+<ul>
+    <li><strong>Lokaal:</strong> Alle workouts, PR's en templates worden direct opgeslagen in een <strong>SQFLite database</strong> op de telefoon van de gebruiker. Dit garandeert een razendsnelle interface zonder laadtijden.</li>
+    <li><strong>Cloud Sync:</strong> Zodra er verbinding is, synchroniseert de app met de backend (<strong>Spring Boot</strong> draaiend in Railway) en een <strong>PostgreSQL database</strong> voor veilige back-ups en sociale interacties.</li>
+</ul>
+
+<h3>Sociale Competitie & Tracking</h3>
+<p>Naast tracking biedt VOYD een sociaal ecosysteem. Gebruikers kunnen vrienden toevoegen, elkaars PR's inzien en competities starten. Dit gamification-element stimuleert de consistentie van de gebruiker, terwijl templates en gedetailleerde statistieken zorgen voor een professionele trainingsaanpak.</p>
+
+<h3>Stack & Roadmap</h3>
+<p>De app is ontwikkeld met <strong>Flutter</strong> voor een soepele cross-platform ervaring op iOS en Android. Momenteel werk ik aan de integratie van een <strong>native betalingssysteem</strong> via Google Pay en Apple Pay om een premium abonnementsmodel mogelijk te maken. De backend is volledig gecontaineriseerd en schaalbaar ingericht via Railway.</p>
+
+<h3>Resultaat</h3>
+<p>VOYD Fitness is meer dan een tracker; het is een robuuste, AI-gestuurde assistent die de kloof dicht tussen data-verzameling en daadwerkelijke fysieke progressie, ongeacht of de gebruiker verbonden is met het internet of niet.</p>
