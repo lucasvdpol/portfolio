@@ -14,20 +14,15 @@
     }
     .avatar-wrap { position: relative; }
     .avatar-placeholder {
-      width: 100%;
-      max-width: 380px;
-      aspect-ratio: 1;
-      border-radius: 12px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      position: relative;
-      overflow: hidden;
-    }
+  width: 100%;
+  max-width: 300px; /* Iets kleiner gemaakt (was 380px) voor een betere balans */
+  aspect-ratio: 1;
+  margin: 0; /* Zorgt dat de foto netjes in het midden blijft staan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
     .avatar-placeholder::before {
       content: '';
       position: absolute;
@@ -43,38 +38,38 @@
       font-size: 2.5rem;
       position: relative;
     }
-    .avatar-placeholder p {
-      color: var(--muted);
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-family: 'Space Mono', monospace;
-      position: relative;
-    }
+    .avatar-placeholder {
+  width: 100%;
+  max-width: 300px; /* Of 380px, wat je zelf mooi vindt */
+  aspect-ratio: 1;
+  position: relative; /* Cruciaal: de badge kijkt nu naar de randen van DEZE div */
+  margin: 0 auto;    /* Zorgt dat de foto (en badge) in het midden van de kolom staan */
+}
     .avatar-badge {
-      position: absolute;
-      bottom: -12px; right: -12px;
-      background: var(--blue);
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-    }
+  position: absolute;
+  bottom: 5px;   /* Iets aangepast zodat hij mooi over de rand van de cirkel valt */
+  right: 5px;    /* Iets aangepast */
+  background: var(--blue);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  white-space: nowrap; /* Zorgt dat de tekst niet afbreekt */
+  z-index: 10;        /* Zorgt dat hij bovenop de foto blijft liggen */
+}
     /* Als je een echte foto hebt, gebruik dan:
        <img src="jouwfoto.jpg" class="avatar-img" alt="Jouw Naam" />
     */
     .avatar-img {
-      width: 100%;
-      max-width: 380px;
-      aspect-ratio: 1;
-      object-fit: cover;
-      border-radius: 12px;
-      display: block;
-      border: 1px solid var(--border);
-    }
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 50%; /* Voor het geval dat, dit dwingt een cirkelvorm af */
+  display: block;
+}
     .about-text p { color: var(--muted); margin-bottom: 1rem; }
 
     /* Timeline */
@@ -173,12 +168,12 @@
     <div class="about-grid">
       <!-- FOTO: vervang de avatar-placeholder div door een <img> tag met jouw foto -->
       <div class="avatar-wrap">
-        <div class="avatar-placeholder">
-          <div class="avatar-icon">🧑‍💻</div>
-          <p>Voeg hier jouw foto toe</p>
-        </div>
-        <div class="avatar-badge">Open for hire ✦</div>
-      </div>
+  <div class="avatar-placeholder">
+    <img src="assets/images/profielfoto_rond.png" class="avatar-img" alt="Profielfoto">
+    <!-- Verplaats de badge naar hier: -->
+    <div class="avatar-badge">Open for hire ✦</div>
+  </div>
+</div>
 
       <div class="about-text">
         <h2 class="section-title" style="font-size:1.8rem; margin-bottom:1.2rem;">

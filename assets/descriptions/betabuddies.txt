@@ -25,4 +25,4 @@
 </ul>
 
 <h3>Resultaat</h3>
-<p>Het project resulteerde in een geteste Proof of Concept (POC) die verder gaat dan alleen een interface. Het biedt een fundament voor een veilige, inclusieve buurt-app die bewoners niet alleen online verbindt, maar vooral activeert om elkaar in de echte wereld te ontmoeten.</p>
+<p>Het project resulteerde in een geteste MVP die verder gaat dan alleen een interface. Het biedt een fundament voor een veilige, inclusieve buurt-app die bewoners niet alleen online verbindt, maar vooral activeert om elkaar in de echte wereld te ontmoeten.</p>
