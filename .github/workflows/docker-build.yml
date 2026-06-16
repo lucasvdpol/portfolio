@@ -22,3 +22,14 @@ jobs:
         with:
           push: true
           tags: lucasvdpol/portfolio:latest
+      
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /opt/portfolio
+            docker-compose pull            
+            docker-compose up -d portfolio-app
