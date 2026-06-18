@@ -49,6 +49,25 @@ export const projects = [
     ]
   },
   {
+    id: 3,
+    title: "NutroX",
+    short: "Een supplementen webshop gebouwd als first full stack project op Hogeschool Leiden.",
+    long: "Tijdens het first full stack traject op Hogeschool Leiden heb ik een supplementen webshop gebouwd. Na gebruikersonderzoek en een styleguide heb ik de backend in Spring Boot met PostgreSQL en de frontend in Angular ontwikkeld. Gebruikers kunnen producten bestellen, bestellingen bekijken, inloggen en registreren. Een admin kan producten toevoegen en aanpassen.",
+    tags: ["Angular", "Spring Boot", "PostgreSQL"],
+    year: "2025",
+    role: "Fullstack Developer",
+    status: "Live",
+    live: "https://webshop.lucasvandepol.com",
+    image: "/assets/images/nutrox/logo.webp",
+    descriptionFile: "/assets/descriptions/nutrox.txt",
+    screenshots: [
+      "/assets/images/nutrox/applicatie-front-klassediagram2.drawio(1).png",
+      "/assets/images/nutrox/FFS-ERD.drawio.png",
+      "/assets/images/nutrox/StakeholderDiagram.drawio.png",
+      "/assets/images/nutrox/UC-DiagramFirstFullStack.png"
+    ],
+  },
+  {
     id: 2,
     title: "Luxury Products Holding",
     short: "Features bouwen voor een opdrachtgever in een bestaande website.",

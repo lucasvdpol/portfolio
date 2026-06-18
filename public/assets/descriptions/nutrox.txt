@@ -1,0 +1,22 @@
+<h3>NutroX: Een Supplementen Webshop</h3>
+<p>NutroX is een full stack supplementen webshop die ik heb gebouwd tijdens het <strong>first full stack traject</strong> op de Hogeschool Leiden. Het doel was om een complete webshop te realiseren, van gebruikersonderzoek tot een werkende applicatie.</p>
+
+<h3>Gebruikersonderzoek & Styleguide</h3>
+<p>Het project begon met onderzoek naar de doelgroep. Op basis van de bevindingen heb ik een <strong>styleguide</strong> opgesteld met kleurgebruik, typografie en componenten die aansluiten bij de sportieven en gezondheidsgerichte gebruiker van een supplementen webshop.</p>
+
+<h3>Backend: Spring Boot & PostgreSQL</h3>
+<p>De backend is gebouwd met <strong>Spring Boot</strong> en maakt gebruik van een <strong>PostgreSQL</strong> database. De REST API verwerkt alle verzoeken rondom producten, bestellingen en gebruikersbeheer. Authenticatie en autorisatie zijn geïmplementeerd met rollen voor normale gebruikers en admins.</p>
+
+<h3>Frontend: Angular</h3>
+<p>De frontend is gerealiseerd in <strong>Angular</strong>. Gebruikers kunnen:</p>
+<ul>
+    <li><strong>Producten bekijken en bestellen</strong> via een overzichtelijke productcatalogus.</li>
+    <li><strong>Bestellingen inzien</strong> in hun persoonlijke bestelgeschiedenis.</li>
+    <li><strong>Inloggen en registreren</strong> met een beveiligd accountsysteem.</li>
+</ul>
+
+<h3>Admin Beheer</h3>
+<p>Naast de gebruikersfunctionaliteit is er een <strong>adminrol</strong> ingebouwd. Een beheerder kan producten toevoegen, bewerken en verwijderen via een apart beheerpaneel, zonder dat daarvoor directe databasetoegang nodig is.</p>
+
+<h3>Resultaat</h3>
+<p>NutroX is een volledig werkende webshop die de hele cyclus van een full stack project doorloopt: van onderzoek en ontwerp tot een live applicatie. Het project heeft mij inzicht gegeven in de samenwerking tussen een Java-backend en een modern frontend framework.</p>

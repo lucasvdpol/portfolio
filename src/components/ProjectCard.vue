@@ -4,10 +4,10 @@
       <img :src="project.image" :alt="project.title" />
     </div>
     <div class="project-body">
+      <h3>{{ project.title }}</h3>
       <div class="project-tags">
         <span class="tag" v-for="t in project.tags" :key="t">{{ t }}</span>
       </div>
-      <h3>{{ project.title }}</h3>
       <p>{{ project.short }}</p>
       <div class="project-links">
         <span class="project-link primary" v-if="project.live">Live <IconArrowUpRight /></span>
