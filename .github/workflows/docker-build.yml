@@ -30,6 +30,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /opt/portfolio
-            docker-compose pull            
-            docker-compose up -d portfolio-app
+            cd /opt/reverse-proxy
+            docker compose pull            
+            docker compose up -d portfolio-app
