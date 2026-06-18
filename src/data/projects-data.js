@@ -77,7 +77,7 @@ export const projects = [
     role: "Fullstack Developer",
     status: "MVP",
     // github: "https://github.com",
-    live: null,
+    live: "https://returnwebshop.lucasvandepol.com",
     image: "/assets/images/holding/insofad.png",
     descriptionFile: "/assets/descriptions/luxuryproductsholding.txt",
     screenshots: [
