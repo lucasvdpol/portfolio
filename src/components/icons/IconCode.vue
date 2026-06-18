@@ -1,0 +1,6 @@
+<template>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="9 8 4 12 9 16" />
+    <polyline points="15 8 20 12 15 16" />
+  </svg>
+</template>

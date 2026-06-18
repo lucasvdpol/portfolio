@@ -2,15 +2,17 @@
   <div v-if="!project" class="not-found">
     <h2>Project niet gevonden</h2>
     <p>Dit project bestaat niet of is verwijderd.</p>
-    <router-link class="btn btn-ghost" to="/projects" style="margin-top:1.5rem; display:inline-flex;">← Terug naar overzicht</router-link>
+    <router-link class="btn btn-ghost" to="/projects" style="margin-top:1.5rem; display:inline-flex;"><IconArrowLeft /> Terug naar overzicht</router-link>
   </div>
 
   <template v-else>
     <div class="back-container">
-      <router-link class="back-link" to="/projects">← Terug naar projecten</router-link>
+      <router-link class="back-link" to="/projects"><IconArrowLeft /> Terug naar projecten</router-link>
     </div>
     <div class="detail-section">
-      <div class="detail-thumb" v-html="thumbnail"></div>
+      <div class="detail-thumb">
+        <img :src="project.image" :alt="project.title" />
+      </div>
 
       <div class="detail-body">
         <div class="project-tags" style="margin-bottom:1rem;">
@@ -45,9 +47,9 @@
         </div>
 
         <div class="detail-actions">
-          <a v-if="project.live" class="btn btn-primary" :href="project.live" target="_blank">Live bekijken ↗</a>
-          <a v-if="project.playstore" class="btn btn-primary" :href="project.playstore" target="_blank">Play Store ↗</a>
-          <a v-if="project.appstore" class="btn btn-primary" :href="project.appstore" target="_blank">App Store ↗</a>
+          <a v-if="project.live" class="btn btn-primary" :href="project.live" target="_blank">Live bekijken <IconArrowUpRight /></a>
+          <a v-if="project.playstore" class="btn btn-primary" :href="project.playstore" target="_blank">Play Store <IconArrowUpRight /></a>
+          <a v-if="project.appstore" class="btn btn-primary" :href="project.appstore" target="_blank">App Store <IconArrowUpRight /></a>
         </div>
 
         <div :class="galleryClass" style="margin-top: 3rem;">
@@ -63,12 +65,13 @@
 <script setup>
 import { ref, computed, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
-import { projects, makeThumbnailSVG } from '../data/projects-data.js'
+import { projects } from '../data/projects-data.js'
+import IconArrowLeft from '../components/icons/IconArrowLeft.vue'
+import IconArrowUpRight from '../components/icons/IconArrowUpRight.vue'
 
 const route = useRoute()
 
 const project = computed(() => projects.find(p => p.id === Number(route.params.id)))
-const thumbnail = computed(() => project.value ? makeThumbnailSVG(project.value, 900, 400) : '')
 
 const isMobileApp = computed(() => project.value && (project.value.tags.includes('Flutter') || project.value.tags.includes('App')))
 const galleryClass = computed(() => isMobileApp.value ? 'project-gallery mobile-screens' : 'project-gallery')
@@ -118,11 +121,9 @@ watchEffect(() => {
   gap: 8px;
   color: var(--muted);
   text-decoration: none;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-size: 0.9rem;
   transition: color 0.2s;
 }
 
@@ -133,30 +134,34 @@ watchEffect(() => {
 }
 
 .back-link:hover {
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .detail-thumb {
   width: 100%;
   aspect-ratio: 16/9;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
   margin-bottom: 2.5rem;
+  background: var(--bg3);
 }
 
-.detail-thumb svg {
+.detail-thumb img {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .detail-title {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
   margin-bottom: 1rem;
-  line-height: 1.1;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
 }
 
 .detail-body p {
@@ -173,7 +178,8 @@ watchEffect(() => {
   padding: 1.5rem;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
   margin: 2rem 0;
 }
 
@@ -184,21 +190,22 @@ watchEffect(() => {
 }
 
 .meta-label {
-  font-size: 0.7rem;
-  letter-spacing: 2px;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--muted);
-  font-family: 'Space Mono', monospace;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
 .meta-val {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 1.05rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .meta-val.blue {
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .detail-actions {
@@ -215,7 +222,7 @@ watchEffect(() => {
 }
 
 .not-found h2 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--text);

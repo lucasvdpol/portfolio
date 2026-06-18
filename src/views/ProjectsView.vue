@@ -1,10 +1,11 @@
 <template>
   <div class="page-hero">
+    <div class="dot-grid"></div>
     <div class="section-label">Overzicht</div>
     <div class="section-title">Mijn Projecten</div>
     <div class="divider"></div>
     <p class="section-desc">
-      Een overzicht van alles wat ik heb gemaakt. Van apps tot tools — elk project is een leerervaring.
+      Een overzicht van alles wat ik heb gemaakt. Van apps tot tools - elk project is een leerervaring.
     </p>
 
     <div class="filter-tabs">
@@ -44,16 +45,6 @@ const filteredProjects = computed(() => {
   position: relative;
   overflow: hidden;
 }
-.page-hero::before {
-  content: '';
-  position: absolute;
-  top: -60px; right: -60px;
-  width: 350px; height: 350px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #4a6cf720, transparent 70%);
-  filter: blur(60px);
-  pointer-events: none;
-}
 
 .filter-tabs {
   display: flex;
@@ -63,30 +54,28 @@ const filteredProjects = computed(() => {
 }
 .filter-tab {
   padding: 7px 18px;
-  border-radius: 4px;
-  font-family: 'Rajdhani', sans-serif;
+  border-radius: 6px;
+  font-family: 'Manrope', sans-serif;
   font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-size: 0.88rem;
   cursor: pointer;
   border: 1px solid var(--border);
   background: transparent;
   color: var(--muted);
   transition: all 0.2s;
 }
-.filter-tab:hover { border-color: var(--blue); color: var(--blue); }
+.filter-tab:hover { border-color: var(--accent); color: var(--accent); }
 .filter-tab.active {
-  background: var(--blue);
-  border-color: var(--blue);
+  background: var(--accent);
+  border-color: var(--accent);
   color: #fff;
 }
 
 .project-count {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
   color: var(--muted);
   margin-bottom: 1.5rem;
 }
-.project-count span { color: var(--blue); }
+.project-count span { color: var(--accent); font-weight: 600; }
 </style>
