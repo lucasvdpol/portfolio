@@ -84,7 +84,7 @@ watchEffect(() => {
   const p = project.value
   if (!p) return
 
-  document.title = `${p.title} — Lucas van de Pol`
+  document.title = `${p.title} - Lucas van de Pol`
   descriptionLoading.value = true
 
   if (p.descriptionFile) {
@@ -152,7 +152,7 @@ watchEffect(() => {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .detail-title {
