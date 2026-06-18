@@ -17,7 +17,7 @@
       <router-link class="btn btn-ghost" to="/contact">Contact</router-link>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">4+</div><div class="stat-label">Projecten</div></div>
+      <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Projecten</div></div>
       <div class="stat"><div class="stat-num">2</div><div class="stat-label">Jaar ervaring</div></div>
       <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Ambitie</div></div>
     </div>
