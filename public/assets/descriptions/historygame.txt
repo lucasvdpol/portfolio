@@ -1,0 +1,18 @@
+<h3>History Game: Geschiedenis Leren Door Te Spelen</h3>
+<p>History Game is een interactief leerspel voor kinderen van <strong>6 tot 12 jaar</strong>, gericht op het thema <strong>Technologie</strong>. Het doel is om geschiedenis op een speelse, laagdrempelige manier toegankelijk te maken voor jonge kinderen, zonder dat het voelt als een schoolboek.</p>
+
+<h3>Doelgroep & Ontwerp</h3>
+<p>Bij het ontwerpen van het spel stond de doelgroep centraal: korte spelrondes, duidelijke visuele feedback en eenvoudige interacties zodat kinderen zonder uitleg vooruit kunnen. Moeilijke begrippen worden vertaald naar herkenbare verhalen en plaatjes.</p>
+
+<h3>Thema: Technologie</h3>
+<p>Spelers reizen door de tijd en ontdekken belangrijke technologische uitvindingen en momenten, van vroege werktuigen tot de opkomst van computers en internet. Door middel van minigames, quizvragen en een tijdlijn leren kinderen verbanden te leggen tussen uitvindingen en hoe de wereld daardoor is veranderd.</p>
+
+<h3>Interactieve Elementen</h3>
+<ul>
+    <li><strong>Tijdlijn-avontuur</strong> waarin spelers door verschillende historische periodes bewegen.</li>
+    <li><strong>Minigames en quizzen</strong> die kennis direct toetsen op een speelse manier.</li>
+    <li><strong>Beloningssysteem</strong> om kinderen gemotiveerd te houden tijdens het leren.</li>
+</ul>
+
+<h3>Resultaat</h3>
+<p>History Game laat zien hoe educatie en spel samen kunnen komen: kinderen leren spelenderwijs over de geschiedenis van technologie, terwijl ze plezier hebben en zelf op ontdekking gaan.</p>

@@ -68,6 +68,20 @@ export const projects = [
     ],
   },
   {
+    id: 4,
+    title: "History Game",
+    short: "Een interactief leerspel over Technologie, gemaakt voor kinderen van 6-12 jaar.",
+    long: "History Game is een educatief spel waarmee kinderen van 6 tot 12 jaar op een interactieve en speelse manier leren over geschiedenis. In deze versie staat het thema Technologie centraal: spelers reizen door de tijd, ontdekken belangrijke uitvindingen en doorlopen minigames en quizzen die zijn afgestemd op hun leeftijd.",
+    tags: ["Educatie", "Game Design", "Kinderen", "Technologie"],
+    year: "2026",
+    role: "Game & Product Designer",
+    status: "Live",
+    live: "https://historygame.lucasvandepol.com",
+    image: "/assets/images/historygame/logo.svg",
+    descriptionFile: "/assets/descriptions/historygame.txt",
+    screenshots: []
+  },
+  {
     id: 2,
     title: "Luxury Products Holding",
     short: "Features bouwen voor een opdrachtgever in een bestaande website.",
