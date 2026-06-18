@@ -8,13 +8,13 @@
       <div class="avatar-wrap">
         <div class="avatar-placeholder">
           <img src="/assets/images/profielfoto_rond.png" class="avatar-img" alt="Profielfoto">
-          <div class="avatar-badge">Open for hire ✦</div>
+          <div class="avatar-badge"><IconCheck /> Open for hire</div>
         </div>
       </div>
 
       <div class="about-text">
         <h2 class="section-title" style="font-size:1.8rem; margin-bottom:1.2rem;">
-          Hoi! Ik ben<br><span style="color:var(--blue)">Lucas van de Pol</span>
+          Hoi! Ik ben<br><span style="color:var(--accent)">Lucas van de Pol</span>
         </h2>
         <p>
           Ik ben een student Informatica met een passie voor het bouwen van mooie, functionele applicaties.
@@ -82,21 +82,21 @@
 
     <div class="interests-grid">
       <div class="interest-card">
-        <div class="interest-icon">💪</div>
+        <div class="interest-icon"><IconDumbbell /></div>
         <div>
           <div class="interest-name">Sporten</div>
           <div class="interest-sub">Krachttraining &amp; Voeding</div>
         </div>
       </div>
       <div class="interest-card">
-        <div class="interest-icon">⌨️</div>
+        <div class="interest-icon"><IconCode /></div>
         <div>
           <div class="interest-name">Programmeren</div>
           <div class="interest-sub">Apps &amp; Software</div>
         </div>
       </div>
       <div class="interest-card">
-        <div class="interest-icon">🍖</div>
+        <div class="interest-icon"><IconFlame /></div>
         <div>
           <div class="interest-name">Barbecueën</div>
           <div class="interest-sub">Biefstuk &amp; Kip</div>
@@ -109,6 +109,13 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import IconCheck from '../components/icons/IconCheck.vue'
+import IconDumbbell from '../components/icons/IconDumbbell.vue'
+import IconCode from '../components/icons/IconCode.vue'
+import IconFlame from '../components/icons/IconFlame.vue'
+</script>
 
 <style scoped>
 .about-grid {
@@ -125,24 +132,21 @@
   position: relative;
   margin: 0 auto;
 }
-.avatar-placeholder::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 30%, #4a6cf718, transparent 65%);
-}
 .avatar-badge {
   position: absolute;
   bottom: 5px;
   right: 5px;
-  background: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
   color: #fff;
   padding: 8px 16px;
-  border-radius: 6px;
-  font-family: 'Rajdhani', sans-serif;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  font-family: 'Manrope', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
-  letter-spacing: 1px;
   white-space: nowrap;
   z-index: 10;
 }
@@ -151,6 +155,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  border: 6px solid var(--bg2);
   display: block;
 }
 .about-text p { color: var(--muted); margin-bottom: 1rem; }
@@ -175,21 +180,22 @@
   width: 20px; height: 20px;
   border-radius: 50%;
   background: var(--bg3);
-  border: 2px solid var(--blue);
+  border: 2px solid var(--accent);
+  box-shadow: var(--shadow-sm);
   flex-shrink: 0;
   margin-top: 4px;
 }
 .timeline-year {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.7rem;
-  color: var(--blue);
-  letter-spacing: 1px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
   margin-bottom: 4px;
 }
 .timeline-content h4 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 4px;
 }
 .timeline-content p { color: var(--muted); font-size: 0.85rem; margin: 0; }
@@ -203,18 +209,33 @@
 .interest-card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
   padding: 1.25rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
-.interest-card:hover { border-color: var(--blue); }
-.interest-icon { font-size: 1.6rem; }
+.interest-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.interest-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 10px;
+}
 .interest-name {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
   font-size: 1rem;
 }
 .interest-sub { color: var(--muted); font-size: 0.78rem; }

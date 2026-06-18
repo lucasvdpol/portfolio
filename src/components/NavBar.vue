@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="{ scrolled }">
     <router-link class="nav-logo" to="/"><span>PORT</span>FOLIO</router-link>
     <ul class="nav-links" :class="{ open: menuOpen }">
       <router-link to="/" custom v-slot="{ navigate, isActive }">
@@ -22,9 +22,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const menuOpen = ref(false)
+const scrolled = ref(false)
+
+function onScroll() {
+  scrolled.value = window.scrollY > 8
+}
+
+onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
+onUnmounted(() => window.removeEventListener('scroll', onScroll))
 
 function closeMenu() {
   menuOpen.value = false

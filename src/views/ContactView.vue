@@ -20,7 +20,7 @@
         </p>
         <div class="contact-links">
           <a class="contact-link-item" href="https://www.linkedin.com/in/lucas-van-de-pol-b027a43b6/" target="_blank">
-            <div class="contact-link-icon">in</div>
+            <div class="contact-link-icon"><IconLinkedIn /></div>
             <div>
               <div class="contact-link-name">LinkedIn</div>
               <div class="contact-link-handle">https://www.linkedin.com/in/lucas-van-de-pol-b027a43b6/</div>
@@ -28,7 +28,7 @@
           </a>
 
           <a class="contact-link-item" href="mailto:lucasvdpol04@gmail.com">
-            <div class="contact-link-icon">✉</div>
+            <div class="contact-link-icon"><IconMail /></div>
             <div>
               <div class="contact-link-name">Email</div>
               <div class="contact-link-handle">lucasvdpol04@gmail.com</div>
@@ -59,6 +59,8 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import IconLinkedIn from '../components/icons/IconLinkedIn.vue'
+import IconMail from '../components/icons/IconMail.vue'
 
 onMounted(() => {
   if (document.querySelector('script[src="https://tally.so/widgets/embed.js"]')) return
@@ -84,32 +86,31 @@ onMounted(() => {
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.25rem;
-  background: var(--bg3);
+  background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
   text-decoration: none;
   color: var(--text);
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .contact-link-item:hover {
-  border-color: var(--blue);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
   transform: translateX(4px);
 }
 .contact-link-icon {
   width: 44px; height: 44px;
-  border-radius: 8px;
-  background: var(--blue-glow);
-  border: 1px solid var(--blue);
+  border-radius: var(--radius-md);
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem;
   flex-shrink: 0;
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 700;
-  color: var(--blue);
+  color: var(--accent);
 }
 .contact-link-name {
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
   font-size: 1rem;
 }
 .contact-link-handle { color: var(--muted); font-size: 0.82rem; }
@@ -119,21 +120,21 @@ onMounted(() => {
   align-items: center;
   gap: 10px;
   padding: 0.9rem 1.2rem;
-  background: #0d1f0e;
-  border: 1px solid #2a7a4a;
-  border-radius: 8px;
+  background: var(--success-soft);
+  border: 1px solid var(--success-border);
+  border-radius: var(--radius-md);
   margin-bottom: 2rem;
 }
 .avail-dot {
   width: 10px; height: 10px;
-  background: #5ce6a0;
+  background: var(--success);
   border-radius: 50%;
   animation: pulse 2s infinite;
   flex-shrink: 0;
 }
 .availability p {
   font-size: 0.85rem;
-  color: #5ce6a0;
+  color: var(--success);
   margin: 0;
 }
 
