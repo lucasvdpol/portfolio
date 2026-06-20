@@ -52,6 +52,10 @@
           <a v-if="project.appstore" class="btn btn-primary" :href="project.appstore" target="_blank">App Store <IconArrowUpRight /></a>
         </div>
 
+        <div v-if="project.downtimeNotice" class="downtime-notice">
+          <IconClock /> {{ project.downtimeNotice }}
+        </div>
+
         <div :class="galleryClass" style="margin-top: 3rem;">
           <div v-for="img in project.screenshots" :key="img" :class="itemClass">
             <img :src="img" alt="Screenshot">
@@ -68,6 +72,7 @@ import { useRoute } from 'vue-router'
 import { projects } from '../data/projects-data.js'
 import IconArrowLeft from '../components/icons/IconArrowLeft.vue'
 import IconArrowUpRight from '../components/icons/IconArrowUpRight.vue'
+import IconClock from '../components/icons/IconClock.vue'
 
 const route = useRoute()
 
@@ -213,6 +218,21 @@ watchEffect(() => {
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+}
+
+.downtime-notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+  padding: 10px 16px;
+  border: 1px solid var(--warning-border);
+  border-radius: var(--radius-md);
+  background: var(--warning-soft);
+  color: var(--warning);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 .not-found {
