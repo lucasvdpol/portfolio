@@ -58,6 +58,7 @@ export const projects = [
     role: "Fullstack Developer",
     status: "Live",
     live: "https://webshop.lucasvandepol.com",
+    downtimeNotice: "Let op: de server is offline tussen 20:00 en 09:00 uur.",
     image: "/assets/images/nutrox/logo.webp",
     descriptionFile: "/assets/descriptions/nutrox.txt",
     screenshots: [
@@ -92,6 +93,7 @@ export const projects = [
     status: "MVP",
     // github: "https://github.com",
     live: "https://returnwebshop.lucasvandepol.com",
+    downtimeNotice: "Let op: de server is offline tussen 20:00 en 09:00 uur.",
     image: "/assets/images/holding/insofad.png",
     descriptionFile: "/assets/descriptions/luxuryproductsholding.txt",
     screenshots: [
