@@ -8,7 +8,7 @@
       Een overzicht van alles wat ik heb gemaakt. Van apps tot tools - elk project is een leerervaring.
     </p>
 
-    <div class="filter-tabs">
+    <!-- <div class="filter-tabs">
       <button
         v-for="tab in tabs"
         :key="tab"
@@ -16,9 +16,9 @@
         :class="{ active: activeFilter === tab }"
         @click="activeFilter = tab"
       >{{ tab === 'all' ? 'Alles' : tab }}</button>
-    </div>
+    </div> -->
 
-    <div class="project-count">Toont <span id="countNum">{{ filteredProjects.length }}</span> projecten</div>
+    <div class="project-count"><span id="countNum">{{ filteredProjects.length }}</span> projecten</div>
     <div class="projects-grid">
       <ProjectCard v-for="p in filteredProjects" :key="p.id" :project="p" />
     </div>
